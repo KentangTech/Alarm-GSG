@@ -1,0 +1,75 @@
+{
+    "application": {
+        "single_instance_guid": "gsg-alarm-clock-2025",
+        "dpi_aware": true
+    },
+    "debugging": {
+        "show_console": false,
+        "subprocess_show_console": false,
+        "log_level": "INFO",
+        "log_file": "app.log"
+    },
+    "main_window": {
+        "title": "GSG Alarm Clock",
+        "icon": "icon.png",
+        "default_size": [900, 700],
+        "minimum_size": [700, 500],
+        "maximum_size": [1200, 800],
+        "disable_maximize_button": false,
+        "center_on_screen": true,
+        "start_maximized": false,
+        "start_fullscreen": false,
+        "always_on_top": false,
+        "minimize_to_tray": true,
+        "minimize_to_tray_message": "Alarm diminimize ke tray. Klik ikon untuk membuka."
+    },
+    "popup_window": {
+        "icon": "icon.png",
+        "fixed_title": "Alarm Popup",
+        "center_relative_to_parent": true,
+        "default_size": [600, 400]
+    },
+    "web_server": {
+        "listen_on": ["127.0.0.1", 8080],
+        "www_directory": "www",
+        "index_files": ["index.php", "index.html"],
+        "cgi_interpreter": "php/php-cgi.exe",
+        "cgi_extensions": ["php"],
+        "cgi_temp_dir": "cgi-temp",
+        "404_handler": "",
+        "hide_files": [
+            ".env",
+            "data/alarms.json",
+            "settings.json",
+            "api/"
+        ]
+    },
+    "chrome": {
+        "log_file": "chrome.log",
+        "log_severity": "error",
+        "cache_path": "webcache",
+        "external_drag": true,
+        "external_navigation": false,
+        "reload_page_F5": false,
+        "devtools_F12": false,
+        "remote_debugging_port": 0,
+        "command_line_switches": {
+            "disable-gpu": "",
+            "disable-extensions": "",
+            "disable-plugins": "",
+            "no-first-run": "",
+            "no-default-browser-check": "",
+            "disable-translate": "",
+            "disable-pdf-extension": ""
+        },
+        "enable_downloads": false,
+        "context_menu": {
+            "enable_menu": false,
+            "navigation": false,
+            "print": false,
+            "view_source": false,
+            "open_in_external_browser": false,
+            "devtools": false
+        }
+    }
+}
